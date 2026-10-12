@@ -1,0 +1,83 @@
+.selection {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.dish {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 40px;
+    border-radius: 35px;
+    cursor: pointer;
+    filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13));
+    background-color: white;
+}
+
+.dish:hover {
+    border: 2px solid tomato;
+}
+
+.section img {
+    width: 100%;
+    border-radius: 35px;
+}
+
+.section .price {
+    font-size: 20px;
+}
+
+.section .dishName {
+    font-size: 20px;
+}
+
+.section .dishData {
+    color: grey;
+}
+
+.section .dishButton {
+    background-color: #f1eee9;
+    margin-top: 10px;
+    padding: 10px 30px 10px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+@media (max-width: 800px) {
+    .selection {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .nav {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 600px) {
+    .mainHeader {
+        text-align: center;
+    }
+
+    .selection {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .section h2 {
+        text-align: center;
+    }
+
+    .nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav a {
+        font-size: 20px;
+    }
+}
