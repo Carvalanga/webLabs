@@ -108,13 +108,89 @@
                     </div>
                 </div>
         </section>
+
+        <h1 class="makeOrder">Сделать заказ</h1>
+
+        <form action="https://httpbin.org/post" method="post">
+            <div class="order">
+                <h2>Ваш заказ</h2>
+
+                <label>Суп</label>
+                <select name="soup" required>
+                    <option value="" disabled selected>-- Выберите суп --</option>
+                    <option value="gazpacho">Газпачо</option>
+                    <option value="mushroom-soup">Грибной суп</option>
+                    <option value="norway-soup">Норвежский суп</option>
+                </select>
+
+                <label>Главное блюдо</label>
+                <select name="mainDish" required>
+                    <option value="" disabled selected>-- Выберите главное блюдо --</option>
+                    <option value="lasagna">Лазанья</option>
+                    <option value="potato-and-mushrooms">Жареная картошка с грибами</option>
+                    <option value="potato-and-kotleti">Картофельное пюре с куриными котлетами</option>
+                </select>
+
+                <label>Напиток</label>
+                <select name="juice" required>ы
+                    <option value="" disabled selected>-- Выберите напиток --</option>
+                    <option value="apple-juice">Яблочный сок</option>
+                    <option value="carrot-juice">Морковный сок</option>
+                    <option value="orange-juice">Апельсиновый сок</option>
+                </select>
+
+                <label>Комментарий к заказу</label>
+                <textarea placeholder="Комментарий" name="comment" rows="4" cols="50"></textarea>
+            </div>
+
+            <div class="clientData">
+                <h2>Ваши данные</h2>
+
+                <label>Имя</label>
+                <input type="text" name="name" required>
+
+                <label>Email</label>
+                <input type="email" name="email" required>
+
+                <label>
+                    <input type="checkbox" name="ad">
+                    Получать информацию о скидках и акциях
+                </label>
+
+                <label>Номер телефона</label>
+                <input type="tel" name="tel" required>
+
+                <label>Адрес доставки</label>
+                <input type="text" name="address" required>
+
+                <fieldset>
+                    <legend>Время доставки:</legend>
+
+                    <label>
+                        <input type="radio" name="delivery" value="asap" checked required>
+                        Как можно скорее
+                    </label>
+
+                    <label>
+                        <input type="radio" name="delivery" value="exact" required>
+                        К указанному времени
+                    </label>
+                </fieldset>
+
+                <label>Укажите время доставки</label>
+                <input type="time" name="time">
+            </div>
+
+            <button type="submit">Отправить</button>
+            <button type="reset">Сбросить</button>
+        </form>
     </main>
 
     <footer class="footer" id="contacts">
-        <p>Телефон: <a href="tel:+74951234567">+7 (495) 123-45-67</a></p>
+        <p>Телефон: <a href="tel:+77777777777">+77777777777</a></p>
         <p>Email: <a href="mailto:info@lunch-moscow.ru">info@lunch-moscow.ru</a></p>
         <p>Адрес: г. Москва, ул. Ланчевая, д. 1</p>
-        <p>&copy; 2025 Бизнес-ланчи Москва. Все права защищены.</p>
+        <p>2025 Бизнес-ланчи Москва. Все права защищены.</p>
     </footer>
 
 </body>

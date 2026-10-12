@@ -152,6 +152,8 @@ body {
     text-decoration: underline;
 }
 
+
+
 @media (max-width: 800px) {
     .about-img {
         width: 500px;

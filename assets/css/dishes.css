@@ -2,6 +2,8 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
+    max-width: 80%;
+    margin: 0 auto;
 }
 
 .dish {
@@ -41,6 +43,25 @@
     padding: 10px 30px 10px 30px;
     border-radius: 10px;
     cursor: pointer;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 900px;
+    column-gap: 30px;
+    margin: 0 auto;
+}
+
+main .makeOrder {
+    max-width: 300px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+.order, .clientData {
+    display: grid;
+    flex-direction: column;
 }
 
 @media (max-width: 800px) {
