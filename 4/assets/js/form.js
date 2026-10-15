@@ -13,7 +13,6 @@ const titles = {
 function updateOrder() {
   const box = document.getElementById('orderList');
 
-  // ничего не выбрано
   if (!order.soup && !order.main && !order.drink) {
     box.innerHTML = 'Ничего не выбрано';
     return;
