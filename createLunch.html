@@ -24,89 +24,17 @@
     <main class="main">
         <section class="section">
             <h2>Выберите суп</h2>
-                <div class="selection">
-                    <div class="dish">
-                        <img src="assets/img/soups/gazpacho.jpg">
-                        <p class="price">400р</p>
-                        <p class="dishName">Газпачо</p>
-                        <p class="dishData">400 мл</p>
-                        <button class="dishButton">Добавить</button>
-                    </div>
-
-                    <div class="dish">
-                        <img src="assets/img/soups/mushroom_soup.jpg">
-                        <p class="dishPrice">300р</p>
-                        <p class="dishName">Грибной суп</p>
-                        <p class="dishData">350 мл</p>
-                        <button class="dishButton">Добавить</button>
-                    </div>
-
-                    <div class="dish">
-                        <img src="assets/img/soups/norwegian_soup.jpg">
-                        <p class="price">250р</p>
-                        <p class="dishName">Норвежский суп</p>
-                        <p class="dishData">300 мл</p>
-                        <button class="dishButton">Добавить</button>
-                    </div>
-                </div>
+            <div class="selection" data-category="soup"></div>
         </section>
 
         <section class="section">
             <h2>Выберите главное блюдо</h2>
-                <div class="selection">
-                    <div class="dish">
-                        <img src="assets/img/main_course/lasagna.jpg">
-                        <p class="price">195р</p>
-                        <p class="dishName">Лазанья</p>
-                        <p class="dishData">200 г</p>
-                        <button class="dishButton">Добавить</button>
-                    </div>
-
-                    <div class="dish">
-                        <img src="assets/img/main_course/friedpotatoeswithmushrooms1.jpg">
-                        <p class="price">400р</p>
-                        <p class="dishName">Жареная картошка с грибами</p>
-                        <p class="dishData">500 г</p>
-                        <button class="dishButton">Добавить</button>
-                    </div>
-
-                    <div class="dish">
-                        <img src="assets/img/main_course/chickencutletsandmashedpotatoes.jpg">
-                        <p class="price">500р</p>
-                        <p class="dishName">Картофельное пюре с куриными котлетами </p>
-                        <p class="dishData">350 г</p>
-                        <button class="dishButton">Добавить</button>
-                    </div>
-                </div>
+            <div class="selection" data-category="main"></div>
         </section>
 
         <section class="section">
             <h2>Выберите напиток</h2>
-                <div class="selection">
-                    <div class="dish">
-                        <img src="assets/img/beverages/applejuice.jpg">
-                        <p class="price">100р</p>
-                        <p class="dishName">Яблочный сок</p>
-                        <p class="dishData">300 мл</p>
-                        <button class="dishButton">Добавить</button>
-                    </div>
-
-                    <div class="dish">
-                        <img src="assets/img/beverages/carrotjuice.jpg">
-                        <p class="price">200р</p>
-                        <p class="dishName">Морковный сок</p>
-                        <p class="dishData">300 мл</p>
-                        <button class="dishButton">Добавить</button>
-                    </div>
-
-                    <div class="dish">
-                        <img src="assets/img/beverages/orangejuice.jpg">
-                        <p class="price">150р</p>
-                        <p class="dishName">Апельсиновый сок</p>
-                        <p class="dishData">300 мл</p>
-                        <button class="dishButton">Добавить</button>
-                    </div>
-                </div>
+            <div class="selection" data-category="drink"></div>
         </section>
 
         <h1 class="makeOrder">Сделать заказ</h1>
@@ -115,33 +43,19 @@
             <div class="order">
                 <h2>Ваш заказ</h2>
 
-                <label>Суп</label>
-                <select name="soup" required>
-                    <option value="" disabled selected>-- Выберите суп --</option>
-                    <option value="gazpacho">Газпачо</option>
-                    <option value="mushroom-soup">Грибной суп</option>
-                    <option value="norway-soup">Норвежский суп</option>
-                </select>
+                <div id="orderList"><b>Ничего не выбрано</b></div>
+                <div id="totalPrice"></div>
 
-                <label>Главное блюдо</label>
-                <select name="mainDish" required>
-                    <option value="" disabled selected>-- Выберите главное блюдо --</option>
-                    <option value="lasagna">Лазанья</option>
-                    <option value="potato-and-mushrooms">Жареная картошка с грибами</option>
-                    <option value="potato-and-kotleti">Картофельное пюре с куриными котлетами</option>
-                </select>
-
-                <label>Напиток</label>
-                <select name="juice" required>ы
-                    <option value="" disabled selected>-- Выберите напиток --</option>
-                    <option value="apple-juice">Яблочный сок</option>
-                    <option value="carrot-juice">Морковный сок</option>
-                    <option value="orange-juice">Апельсиновый сок</option>
-                </select>
+                <input type="hidden" name="soup"  id="input-soup"  required>
+                <input type="hidden" name="main"  id="input-main"  required>
+                <input type="hidden" name="drink" id="input-drink" required>
+                <input type="hidden" name="total" id="input-total"  required>
 
                 <label>Комментарий к заказу</label>
                 <textarea placeholder="Комментарий" name="comment" rows="4" cols="50"></textarea>
             </div>
+
+
 
             <div class="clientData">
                 <h2>Ваши данные</h2>
@@ -193,5 +107,8 @@
         <p>2025 Бизнес-ланчи Москва. Все права защищены.</p>
     </footer>
 
+    <script src="assets/js/dishes.js"></script>
+    <script src="assets/js/renderCard.js"></script>
+    <script src="assets/js/form.js"></script>
 </body>
 </html>
