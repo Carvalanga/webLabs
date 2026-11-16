@@ -1,0 +1,225 @@
+.selection {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.dish {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 40px;
+    border-radius: 35px;
+    cursor: pointer;
+    filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13));
+    background-color: white;
+}
+
+.dish:hover {
+    border: 2px solid tomato;
+}
+
+.section img {
+    width: 100%;
+    border-radius: 35px;
+}
+
+.section .price {
+    font-size: 20px;
+}
+
+.section .dishName {
+    font-size: 20px;
+}
+
+.section .dishData {
+    color: grey;
+}
+
+.section .dishButton {
+    background-color: #f1eee9;
+    margin-top: auto;
+    padding: 10px 30px 10px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.combos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.combo {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+}
+
+.comboDessert {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.section .comboDish {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.section .comboDish img {
+    width: 80px;
+    border-radius: 0;
+    transition: transform 0.3s;
+}
+
+.section .comboDish img:hover {
+    transform: translateY(-10px) scale(1.15);
+}
+
+.section .comboCaption {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.section .comboNote {
+    margin-top: 5px;
+    font-size: 14px;
+    color: grey;
+}
+
+.notification {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+}
+
+.notificationBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 90%;
+    padding: 30px 40px;
+    border-radius: 15px;
+    background-color: white;
+    text-align: center;
+}
+
+.notificationButton {
+    padding: 10px 30px;
+    border: 1px solid tomato;
+    border-radius: 10px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.notificationButton:hover {
+    background-color: tomato;
+    color: white;
+}
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filterButton {
+    padding: 8px 20px;
+    border: 1px solid tomato;
+    border-radius: 10px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.filterButton.active {
+    background-color: tomato;
+    color: white;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 900px;
+    column-gap: 30px;
+    margin: 0 auto;
+}
+
+main .makeOrder {
+    max-width: 300px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+.order, .clientData {
+    display: grid;
+    flex-direction: column;
+}
+
+@media (max-width: 800px) {
+    .selection {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .combos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .nav {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    form {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .mainHeader {
+        text-align: center;
+    }
+
+    .selection {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .combos {
+        grid-template-columns: 1fr;
+    }
+
+    .section h2 {
+        text-align: center;
+    }
+
+    .nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav a {
+        font-size: 20px;
+    }
+}
