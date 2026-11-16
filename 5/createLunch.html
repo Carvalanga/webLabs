@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бизнес-ланчи в Москве — доставка</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dishes.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="mainHeader">Бизнес-ланчи Москва</h1>
+        <nav class="nav">
+            <a href="index.html">О компании</a>
+            <a class="active" href="createLunch.html">Собрать ланч</a>
+            <a href="#contacts">Контакты</a>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="section">
+            <h2>Выберите суп</h2>
+            <div class="filters" data-category="soup">
+                <button type="button" class="filterButton" data-kind="fish">рыбный</button>
+                <button type="button" class="filterButton" data-kind="meat">мясной</button>
+                <button type="button" class="filterButton" data-kind="veg">вегетарианский</button>
+            </div>
+            <div class="selection" data-category="soup"></div>
+        </section>
+
+        <section class="section">
+            <h2>Выберите главное блюдо</h2>
+            <div class="filters" data-category="main">
+                <button type="button" class="filterButton" data-kind="fish">рыбное</button>
+                <button type="button" class="filterButton" data-kind="meat">мясное</button>
+                <button type="button" class="filterButton" data-kind="veg">вегетарианское</button>
+            </div>
+            <div class="selection" data-category="main"></div>
+        </section>
+
+        <section class="section">
+            <h2>Выберите салат или стартер</h2>
+            <div class="filters" data-category="salad">
+                <button type="button" class="filterButton" data-kind="fish">рыбный</button>
+                <button type="button" class="filterButton" data-kind="meat">мясной</button>
+                <button type="button" class="filterButton" data-kind="veg">вегетарианский</button>
+            </div>
+            <div class="selection" data-category="salad"></div>
+        </section>
+
+        <section class="section">
+            <h2>Выберите напиток</h2>
+            <div class="filters" data-category="drink">
+                <button type="button" class="filterButton" data-kind="cold">холодный</button>
+                <button type="button" class="filterButton" data-kind="hot">горячий</button>
+            </div>
+            <div class="selection" data-category="drink"></div>
+        </section>
+
+        <section class="section">
+            <h2>Выберите десерт</h2>
+            <div class="filters" data-category="dessert">
+                <button type="button" class="filterButton" data-kind="small">маленькая порция</button>
+                <button type="button" class="filterButton" data-kind="medium">средняя порция</button>
+                <button type="button" class="filterButton" data-kind="large">большая порция</button>
+            </div>
+            <div class="selection" data-category="dessert"></div>
+        </section>
+
+        <h1 class="makeOrder">Сделать заказ</h1>
+
+        <form action="https://httpbin.org/post" method="post">
+            <div class="order">
+                <h2>Ваш заказ</h2>
+
+                <div id="orderList"><b>Ничего не выбрано</b></div>
+                <div id="totalPrice"></div>
+
+                <input type="hidden" name="soup"  id="input-soup"  required>
+                <input type="hidden" name="main"  id="input-main"  required>
+                <input type="hidden" name="salad" id="input-salad">
+                <input type="hidden" name="drink" id="input-drink" required>
+                <input type="hidden" name="dessert" id="input-dessert">
+                <input type="hidden" name="total" id="input-total"  required>
+
+                <label>Комментарий к заказу</label>
+                <textarea placeholder="Комментарий" name="comment" rows="4" cols="50"></textarea>
+            </div>
+
+            <div class="clientData">
+                <h2>Ваши данные</h2>
+
+                <label>Имя</label>
+                <input type="text" name="name" required>
+
+                <label>Email</label>
+                <input type="email" name="email" required>
+
+                <label>
+                    <input type="checkbox" name="ad">
+                    Получать информацию о скидках и акциях
+                </label>
+
+                <label>Номер телефона</label>
+                <input type="tel" name="tel" required>
+
+                <label>Адрес доставки</label>
+                <input type="text" name="address" required>
+
+                <fieldset>
+                    <legend>Время доставки:</legend>
+
+                    <label>
+                        <input type="radio" name="delivery" value="asap" checked required>
+                        Как можно скорее
+                    </label>
+
+                    <label>
+                        <input type="radio" name="delivery" value="exact" required>
+                        К указанному времени
+                    </label>
+                </fieldset>
+
+                <label>Укажите время доставки</label>
+                <input type="time" name="time">
+            </div>
+
+            <button type="submit">Отправить</button>
+            <button type="reset">Сбросить</button>
+        </form>
+    </main>
+
+    <footer class="footer" id="contacts">
+        <p>Телефон: <a href="tel:+77777777777">+77777777777</a></p>
+        <p>Email: <a href="mailto:info@lunch-moscow.ru">info@lunch-moscow.ru</a></p>
+        <p>Адрес: г. Москва, ул. Ланчевая, д. 1</p>
+        <p>2025 Бизнес-ланчи Москва. Все права защищены.</p>
+    </footer>
+
+    <script src="assets/js/dishes.js"></script>
+    <script src="assets/js/renderCard.js"></script>
+    <script src="assets/js/form.js"></script>
+</body>
+</html>

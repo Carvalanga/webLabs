@@ -35,6 +35,7 @@
 
 .section .dishData {
     color: grey;
+    margin-top: auto;
 }
 
 .section .dishButton {
